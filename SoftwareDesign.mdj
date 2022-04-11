@@ -19411,6 +19411,23 @@
 										},
 										{
 											"_type": "UMLOperationView",
+											"_id": "AAAAAAGAF4Umw5YCdGA=",
+											"_parent": {
+												"$ref": "AAAAAAF/5cSflaIh8D8="
+											},
+											"model": {
+												"$ref": "AAAAAAGAF4UmuJX7LnE="
+											},
+											"font": "Arial;13;0",
+											"left": 589,
+											"top": 143,
+											"width": 344.5380859375,
+											"height": 13,
+											"text": "+getTravelSlotDetail(id: int): TravelSlot",
+											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLOperationView",
 											"_id": "AAAAAAF/5e9Ai/eflX8=",
 											"_parent": {
 												"$ref": "AAAAAAF/5cSflaIh8D8="
@@ -19420,7 +19437,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 589,
-											"top": 143,
+											"top": 158,
 											"width": 344.5380859375,
 											"height": 13,
 											"text": "-saveTravelFile(): void",
@@ -19437,27 +19454,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 589,
-											"top": 158,
-											"width": 344.5380859375,
-											"height": 13,
-											"text": "-loadUserFile(): void",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAGAF4Umw5YCdGA=",
-											"_parent": {
-												"$ref": "AAAAAAF/5cSflaIh8D8="
-											},
-											"model": {
-												"$ref": "AAAAAAGAF4UmuJX7LnE="
-											},
-											"font": "Arial;13;0",
-											"left": 589,
 											"top": 173,
 											"width": 344.5380859375,
 											"height": 13,
-											"text": "+viewTravelSlotDetail(id: int): TravelSlot",
+											"text": "-loadUserFile(): void",
 											"horizontalAlignment": 0
 										}
 									],
@@ -19722,7 +19722,7 @@
 											"top": 343,
 											"width": 344.5380859375,
 											"height": 13,
-											"text": "+viewTravelSlotDetail(id: int): TravelSlot",
+											"text": "+getTravelSlotDetail(id: int): TravelSlot",
 											"horizontalAlignment": 0
 										}
 									],
@@ -25650,6 +25650,36 @@
 								},
 								{
 									"_type": "UMLOperation",
+									"_id": "AAAAAAGAF4UmuJX7LnE=",
+									"_parent": {
+										"$ref": "AAAAAAF/5cSfl6Md6jQ="
+									},
+									"name": "getTravelSlotDetail",
+									"parameters": [
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGAF4UmuJX8ZuY=",
+											"_parent": {
+												"$ref": "AAAAAAGAF4UmuJX7LnE="
+											},
+											"name": "id",
+											"type": "int"
+										},
+										{
+											"_type": "UMLParameter",
+											"_id": "AAAAAAGAF4UmuJX9uyU=",
+											"_parent": {
+												"$ref": "AAAAAAGAF4UmuJX7LnE="
+											},
+											"type": {
+												"$ref": "AAAAAAF/5cSfk6FQ5vg="
+											},
+											"direction": "return"
+										}
+									]
+								},
+								{
+									"_type": "UMLOperation",
 									"_id": "AAAAAAF/5e9AgPealTU=",
 									"_parent": {
 										"$ref": "AAAAAAF/5cSfl6Md6jQ="
@@ -25684,36 +25714,6 @@
 												"$ref": "AAAAAAF/5e9PXPju5kY="
 											},
 											"type": "void",
-											"direction": "return"
-										}
-									]
-								},
-								{
-									"_type": "UMLOperation",
-									"_id": "AAAAAAGAF4UmuJX7LnE=",
-									"_parent": {
-										"$ref": "AAAAAAF/5cSfl6Md6jQ="
-									},
-									"name": "viewTravelSlotDetail",
-									"parameters": [
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAGAF4UmuJX8ZuY=",
-											"_parent": {
-												"$ref": "AAAAAAGAF4UmuJX7LnE="
-											},
-											"name": "id",
-											"type": "int"
-										},
-										{
-											"_type": "UMLParameter",
-											"_id": "AAAAAAGAF4UmuJX9uyU=",
-											"_parent": {
-												"$ref": "AAAAAAGAF4UmuJX7LnE="
-											},
-											"type": {
-												"$ref": "AAAAAAF/5cSfk6FQ5vg="
-											},
 											"direction": "return"
 										}
 									]
@@ -26124,7 +26124,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF/5cSfl6LuwcA="
 									},
-									"name": "viewTravelSlotDetail",
+									"name": "getTravelSlotDetail",
 									"parameters": [
 										{
 											"_type": "UMLParameter",
