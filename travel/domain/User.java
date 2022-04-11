@@ -2,49 +2,32 @@ package travel.domain;
 
 import java.util.*;
 
-/**
- * 
- */
 public class User {
-
-    /**
-     * Default constructor
-     */
-    public User() {
+	
+	//constructor
+    public User(String username, String password) {
+    	this.username = username;
+    	this.password = password;
     }
 
-    /**
-     * 
-     */
-    private String username;
-
-    /**
-     * 
-     */
-    private String password;
-
-    /**
-     * @param username 
-     * @param password
-     */
-    public void User(String username, String password) {
-        // TODO implement here
-    }
-
-    /**
-     * @return
-     */
+    private String username;  
+    //getter
     public String getUsername() {
-        // TODO implement here
-        return "";
+        return username;
     }
 
-    /**
-     * @return
-     */
+    private String password;
+    //getter
     public String getPassword() {
-        // TODO implement here
-        return "";
+        return password;
     }
-
-}
+    
+//    //setter
+//    public void setUsername(String value1) {
+//    	username = value1;
+//    }
+//    
+//    //setter
+//    public void setPassword(String value2) {
+//    	password = value2;
+//    }
