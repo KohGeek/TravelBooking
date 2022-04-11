@@ -2,136 +2,79 @@ package travel.domain;
 
 import java.util.*;
 
-/**
- * 
- */
 public class Client extends User {
 
-    /**
-     * Default constructor
-     */
-    public Client() {
+	//default constructor
+    public Client(String username, String password, String email, String name, String address, String phonenumber, List<Integer> bookingList) {
+    	super(username, password);
+    	this.email = email;
+    	this.name = name;
+    	this.address = address;
+    	this.phonenumber = phonenumber;
+    	this.bookingList = new ArrayList<>();
     }
 
-    /**
-     * 
-     */
-    private String email;
+ 
 
-    /**
-     * 
-     */
-    private String name;
-
-    /**
-     * 
-     */
-    private String address;
-
-    /**
-     * 
-     */
-    private String phonenumber;
-
-    /**
-     * 
-     */
-    private List<Integer> bookingList;
-
-
-
-    /**
-     * @param username 
-     * @param password
-     */
-    public void Client(String username, String password) {
-        // TODO implement here
-    }
-
-    /**
-     * @return
-     */
+	private String email;
+    //getter
     public String getEmail() {
-        // TODO implement here
-        return "";
+        return email;
     }
 
-    /**
-     * @param value
-     */
-    public void setEmail(String value) {
-        // TODO implement here
-    }
-
-    /**
-     * @return
-     */
+    private String name;
+    //getter
     public String getName() {
-        // TODO implement here
-        return "";
+        return name;
     }
 
-    /**
-     * @param value
-     */
-    public void setName(String value) {
-        // TODO implement here
-    }
-
-    /**
-     * @return
-     */
+    private String address;
+    //getter
     public String getAddress() {
-        // TODO implement here
-        return "";
+        return address;
     }
 
-    /**
-     * @param value
-     */
-    public void setAddress(String value) {
-        // TODO implement here
-    }
-
-    /**
-     * @return
-     */
+    private String phonenumber;
+    //getter
     public String getPhonenumber() {
-        // TODO implement here
-        return "";
+        return phonenumber;
     }
 
-    /**
-     * @param value
-     */
-    public void setPhonenumber(String value) {
-        // TODO implement here
+    //setter
+    public void setEmail(String value1) {
+        email = value1;
     }
 
-    /**
-     * @return
-     */
+    //setter
+    public void setName(String value2) {
+        name = value2;
+    }
+
+    //setter
+    public void setAddress(String value3) {
+       address = value3;
+    }
+
+
+    public void setPhonenumber(String value4) {
+        phonenumber = value4;
+    }
+
+
+    private List<Integer> bookingList;
+    //getter
     public List<Integer> getAllBookedTrip() {
-        // TODO implement here
-        return null;
+        return bookingList;
     }
 
-    /**
-     * @param TravelSlotId 
-     * @return
-     */
+    //Assume TravelSlotId is the index of the bookingList
     public void addTrip(int TravelSlotId) {
-        // TODO implement here
-        return null;
+    	bookingList.add(TravelSlotId);
     }
 
-    /**
-     * @param TravelSlotId 
-     * @return
-     */
+    //Assume TravelSlotId is the index of the bookingList
     public void removeTrip(int TravelSlotId) {
-        // TODO implement here
-        return null;
+        bookingList.remove(TravelSlotId-1);
     }
 
 }
