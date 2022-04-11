@@ -31,3 +31,4 @@ public class User {
 //    public void setPassword(String value2) {
 //    	password = value2;
 //    }
+}
