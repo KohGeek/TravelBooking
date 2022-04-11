@@ -8,18 +8,14 @@ import java.util.*;
 public class ConsoleApp {
 
     /**
-     * Default constructor
-     */
-    public ConsoleApp() {
-    }
-
-
-    /**
      * @return
      */
     public static void main() {
-        // TODO implement here
-        return null;
+        String userDataFile = "user.txt";
+        String travelDataFile = "travel.txt";
+        ConsoleUI ui = new ConsoleUI(userDataFile, travelDataFile);
+
+        ui.start();
     }
 
 }

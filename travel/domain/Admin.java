@@ -10,9 +10,8 @@ public class Admin extends User {
     /**
      * Default constructor
      */
-    public Admin() {
+    public Admin(String username, String password) {
+        super(username, password);
     }
-
-//can you see this
 
 }

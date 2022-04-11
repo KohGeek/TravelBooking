@@ -1,108 +1,100 @@
 package travel.domain;
 
-import java.util.*;
+import java.util.List;
 
 /**
  * 
  */
 public class MainController {
 
-    /**
-     * Default constructor
-     */
-    public MainController() {
-    }
-
-    /**
-     * 
-     */
     private IDataList travelSlotLists;
-
-    /**
-     * 
-     */
     private User currentUser;
 
-
-
-
     /**
-     * @param travelDataFile 
+     * @param travelDataFile
      * @param user
      */
-    public void MainController(String travelDataFile, User user) {
-        // TODO implement here
+    public MainController(String travelDataFile) {
+        this.travelSlotLists = new TravelLists(travelDataFile);
     }
 
     /**
-     * @param location 
-     * @return
+     * @param location
+     * @return List<TravelSlot>
      */
     public List<TravelSlot> searchTravelSlots(String location) {
-        // TODO implement here
-        return null;
+        return travelSlotLists.searchTravelSlots(location);
     }
 
     /**
-     * @param travelSlotId 
-     * @return
+     * @param travelSlotId
+     * @return TravelSlot
      */
     public TravelSlot viewTravelSlotDetail(int travelSlotId) {
-        // TODO implement here
-        return null;
+        return travelSlotLists.getTravelSlotDetail(travelSlotId);
     }
 
     /**
-     * @param travelSlotId 
-     * @param value 
-     * @param type 
-     * @return
+     * @param travelSlotId
+     * @param value
+     * @param type
      */
     public void editTravelSlot(int travelSlotId, String value, int type) {
-        // TODO implement here
-        return null;
+        travelSlotLists.editTravelSlot(travelSlotId, value, type);
     }
 
     /**
-     * @param travelSlotId 
-     * @return
+     * @param travelSlotId
      */
     public void removeTravelSlot(int travelSlotId) {
-        // TODO implement here
-        return null;
+        travelSlotLists.removeTravelSlot(travelSlotId);
     }
 
     /**
-     * @param id 
-     * @param time 
-     * @param date 
-     * @param location 
-     * @param price 
-     * @return
+     * @param id
+     * @param time
+     * @param date
+     * @param location
+     * @param price
      */
     public void createTravelSlot(int id, String time, String date, String location, float price) {
-        // TODO implement here
-        return null;
+        TravelSlot newTravelSlot = new TravelSlot(id);
+        newTravelSlot.setTime(time);
+        newTravelSlot.setDate(date);
+        newTravelSlot.setLocation(location);
+        newTravelSlot.setPrice(price);
+        travelSlotLists.createTravelSlot(newTravelSlot);
     }
 
     /**
-     * @param username 
-     * @param travelSlotId 
-     * @return
+     * @param travelSlotId
      */
-    public void bookTrip(String username, int travelSlotId) {
-        // TODO implement here
-        return null;
+    public void bookTrip(int travelSlotId) {
+        if (currentUser instanceof Client) {
+            Client user = (Client) currentUser;
+            user.addTrip(travelSlotId);
+        } else {
+            throw new IllegalArgumentException("Only client can book trip");
+        }
     }
 
     /**
-     * @param username 
-     * @param travelSlotId 
-     * @return
+     * @param travelSlotId
      */
-    public void cancelBooking(String username, int travelSlotId) {
-        // TODO implement here
-        return null;
+    public void cancelBooking(int travelSlotId) {
+        if (currentUser instanceof Client) {
+            Client user = (Client) currentUser;
+            user.removeTrip(travelSlotId);
+        } else {
+            throw new IllegalArgumentException("Only client can cancel booking");
+        }
+    }
+
+    /**
+     * @param user
+     */
+    public void setCurrentUser(User user) {
+        this.currentUser = user;
     }
 
 }
