@@ -11,7 +11,7 @@ public class Client extends User {
     	this.name = name;
     	this.address = address;
     	this.phonenumber = phonenumber;
-    	this.bookingList = new ArrayList<>();
+    	this.bookingList = new ArrayList<Integer>();
     }
 
  
