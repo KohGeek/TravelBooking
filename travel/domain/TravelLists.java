@@ -1,6 +1,6 @@
 package travel.domain;
 
-import java.util.*;
+import java.util.List;
 
 /**
  * 
@@ -18,7 +18,6 @@ public class TravelLists implements IDataList {
      */
     private List<TravelSlot> travelslots;
 
-
     /**
      * 
      */
@@ -27,7 +26,7 @@ public class TravelLists implements IDataList {
     }
 
     /**
-     * @param travelSlot 
+     * @param travelSlot
      * @return
      */
     public void createTravelSlot(TravelSlot travelSlot) {
@@ -36,7 +35,7 @@ public class TravelLists implements IDataList {
     }
 
     /**
-     * @param travelSlotId 
+     * @param travelSlotId
      * @return
      */
     public void removeTravelSlot(int travelSlotId) {
@@ -45,7 +44,7 @@ public class TravelLists implements IDataList {
     }
 
     /**
-     * @param location 
+     * @param location
      * @return
      */
     public List<TravelSlot> searchTravelSlots(String location) {
@@ -54,9 +53,9 @@ public class TravelLists implements IDataList {
     }
 
     /**
-     * @param travelSlotId 
-     * @param value 
-     * @param type 
+     * @param travelSlotId
+     * @param value
+     * @param type
      * @return
      */
     public void editTravelSlot(int travelSlotId, String value, int type) {
@@ -81,7 +80,7 @@ public class TravelLists implements IDataList {
     }
 
     /**
-     * @param travelSlot 
+     * @param travelSlot
      * @return
      */
     public void createTravelSlot(TravelSlot travelSlot) {
@@ -90,7 +89,7 @@ public class TravelLists implements IDataList {
     }
 
     /**
-     * @param travelSlotId 
+     * @param travelSlotId
      * @return
      */
     public void removeTravelSlot(int travelSlotId) {
@@ -99,7 +98,7 @@ public class TravelLists implements IDataList {
     }
 
     /**
-     * @param location 
+     * @param location
      * @return
      */
     public List<TravelSlot> searchTravelSlots(String location) {
@@ -108,9 +107,9 @@ public class TravelLists implements IDataList {
     }
 
     /**
-     * @param travelSlotId 
-     * @param value 
-     * @param type 
+     * @param travelSlotId
+     * @param value
+     * @param type
      * @return
      */
     public void editTravelSlot(int travelSlotId, String value, int type) {

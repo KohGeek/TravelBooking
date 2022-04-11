@@ -1,6 +1,6 @@
 package travel.domain;
 
-import java.util.*;
+import java.util.List;
 
 /**
  * 
@@ -23,7 +23,6 @@ public class UserLists implements IUserList {
      */
     private String userDataFile;
 
-
     /**
      * @param userDataFile
      */
@@ -32,8 +31,8 @@ public class UserLists implements IUserList {
     }
 
     /**
-     * @param username 
-     * @param password 
+     * @param username
+     * @param password
      * @return
      */
     public User login(String username, String password) {
@@ -42,7 +41,7 @@ public class UserLists implements IUserList {
     }
 
     /**
-     * @param user 
+     * @param user
      * @return
      */
     public User createClientProfile(User user) {
@@ -51,18 +50,18 @@ public class UserLists implements IUserList {
     }
 
     /**
-     * @param username 
-     * @param value  
-     * @param type 
+     * @param username
+     * @param value
+     * @param type
      * @return
      */
-    public void updateClientProfile(String username, String value , int type) {
+    public void updateClientProfile(String username, String value, int type) {
         // TODO implement here
         return null;
     }
 
     /**
-     * @param user 
+     * @param user
      * @return
      */
     public void updateUser(User user) {
@@ -87,8 +86,8 @@ public class UserLists implements IUserList {
     }
 
     /**
-     * @param username 
-     * @param password 
+     * @param username
+     * @param password
      * @return
      */
     public User login(String username, String password) {
@@ -97,7 +96,7 @@ public class UserLists implements IUserList {
     }
 
     /**
-     * @param user 
+     * @param user
      * @return
      */
     public User createClientProfile(User user) {
@@ -106,18 +105,18 @@ public class UserLists implements IUserList {
     }
 
     /**
-     * @param username 
-     * @param value  
-     * @param type 
+     * @param username
+     * @param value
+     * @param type
      * @return
      */
-    public void updateClientProfile(String username, String value , int type) {
+    public void updateClientProfile(String username, String value, int type) {
         // TODO implement here
         return null;
     }
 
     /**
-     * @param user 
+     * @param user
      * @return
      */
     public void updateUser(User user) {

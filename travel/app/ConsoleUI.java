@@ -1,7 +1,5 @@
 package travel.app;
 
-import java.util.*;
-
 /**
  * 
  */
@@ -27,8 +25,6 @@ public class ConsoleUI {
      * 
      */
     public ProfileController profileController;
-
-
 
     /**
      * @return

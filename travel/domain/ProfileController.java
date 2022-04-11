@@ -1,7 +1,5 @@
 package travel.domain;
 
-import java.util.*;
-
 /**
  * 
  */
