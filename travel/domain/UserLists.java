@@ -8,12 +8,6 @@ import java.util.List;
 public class UserLists implements IUserList {
 
     /**
-     * Default constructor
-     */
-    public UserLists() {
-    }
-
-    /**
      * 
      */
     private List<User> users;
@@ -26,7 +20,7 @@ public class UserLists implements IUserList {
     /**
      * @param userDataFile
      */
-    public void UserLists(String userDataFile) {
+    public UserLists(String userDataFile) {
         // TODO implement here
     }
 

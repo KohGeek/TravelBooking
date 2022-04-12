@@ -33,4 +33,10 @@ public interface IDataList {
      */
     public void editTravelSlot(int travelSlotId, String value, int type);
 
+    /**
+     * @param id
+     * @return TravelSlot
+     */
+    public TravelSlot getTravelSlotDetail(int id);
+
 }
