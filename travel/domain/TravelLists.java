@@ -81,7 +81,8 @@ public class TravelLists implements IDataList {
     }
 
     /**
-     * @return
+     * @param id
+     * @return TravelSlot
      */
     public TravelSlot getTravelSlotDetail(int id) {
         TravelSlot selectedSlot = null;
