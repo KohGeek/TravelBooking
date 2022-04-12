@@ -39,7 +39,7 @@ public class TravelSlot {
     /**
      * @param id
      */
-    public void TravelSlot(int id) {
+    public TravelSlot(int id) {
         // TODO implement here
     }
 
