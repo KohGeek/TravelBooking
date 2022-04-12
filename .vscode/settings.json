@@ -1,6 +1,6 @@
 {
   "java.project.referencedLibraries": [
     "${env:JavaFx}/lib/**/*.jar",
-    "lib/commons-csv-1.9.0/commons-csv-1.9.0.jar"
+    "lib/commons-csv/commons-csv.jar"
   ]
 }
