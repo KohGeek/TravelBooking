@@ -33,20 +33,57 @@ public class ConsoleUI {
         do {
             switch (option) {
                 case 1:
-                    mainController.createTravelSlot();
+                {
+                    System.out.println("Create a new Travel Slot");
+                    System.out.print("Please enter the Travel Slot Id : ");
+                    int newTravelSlotId = scanner.nextInt();
+                    System.out.print("Please enter the Travel Time : ");
+                    String time = scanner.next();
+                    System.out.print("Please enter the Travel Date : ");
+                    String date = scanner.next();
+                    System.out.print("Please enter the Travel Location : ");
+                    String location = scanner.next();
+                    System.out.print("Please enter the Travel Price : ");
+                    float price = scanner.nextFloat();
+                    mainController.createTravelSlot(newTravelSlotId, time, date, location, price);
                     break;
+                }
                 case 2:
-                    mainController.editTravelSlot();
+                {
+                    System.out.println("Edit a travel slot details");
+                    System.out.print("Please enter the Travel Slot Id : ");
+                    int travelSlotId = scanner.nextInt();
+                    System.out.print("Please enter the detail value : ");
+                    String value = scanner.next();
+                    System.out.print("Please enter the type : ");
+                    int type = scanner.nextInt();
+                    mainController.editTravelSlot(travelSlotId, value, type);
                     break;
+                }
                 case 3:
-                    mainController.viewTravelSlots();
+                {
+                    System.out.println("View a travel slot details");
+                    System.out.print("Please enter the Travel Slot Id : ");
+                    int travelSlotId = scanner.nextInt();
+                    mainController.getTravelSlotDetail(travelSlotId);
                     break;
+                }
                 case 4:
-                    mainController.searchTravelSlots();
+                {
+                    System.out.println("Search for travel slots");
+                    System.out.print("Please enter location to search : ");
+                    String location = scanner.next();
+                    mainController.searchTravelSlots(location);
                     break;
+                }
                 case 5:
-                    mainController.removeTravelSlot();
+                {
+                    System.out.println("Remove a travel slot");
+                    System.out.print("Please enter the Travel Slot Id for removal : ");
+                    int travelSlotId = scanner.nextInt();
+                    mainController.removeTravelSlot(travelSlotId);
                     break;
+                }
                 case 9:
                     return;
             }
@@ -68,11 +105,21 @@ public class ConsoleUI {
         do {
             switch (option) {
                 case 1:
-                    mainController.bookTrip();
+                {
+                    System.out.println("Book a travel trip");
+                    System.out.print("Please enter the Travel Slot Id for booking : ");
+                    int travelSlotId = scanner.nextInt();
+                    mainController.bookTrip(travelSlotId);
                     break;
+                }
                 case 2:
+                {
+                    System.out.println("Cancel a booking travel trip");
+                    System.out.print("Please enter the Travel Slot Id for cancel : ");
+                    int travelSlotId = scanner.nextInt();
                     mainController.cancelBooking();
                     break;
+                }
                 case 9:
                     return;
             }
@@ -84,9 +131,9 @@ public class ConsoleUI {
      * @return
      */
     private void loginUI() {
-        System.out.println("Enter username: ");
+        System.out.print("Enter username: ");
         String username = scanner.next();
-        System.out.println("Enter password: ");
+        System.out.print("Enter password: ");
         String password = scanner.next();
         currentUser = profileController.login(username, password);
         if (currentUser instanceof Admin) {
@@ -106,17 +153,17 @@ public class ConsoleUI {
             loginUI();
         }
         if (choice == 2) {
-            System.out.println("Enter username: ");
+            System.out.print("Enter username: ");
             String username = scanner.next();
-            System.out.println("Enter password: ");
+            System.out.print("Enter password: ");
             String password = scanner.next();
-            System.out.println("Enter email: ");
+            System.out.print("Enter email: ");
             String email = scanner.next();
-            System.out.println("Enter name: ");
+            System.out.print("Enter name: ");
             String name = scanner.next();
-            System.out.println("Enter address: ");
+            System.out.print("Enter address: ");
             String address = scanner.next();
-            System.out.println("Enter phone number: ");
+            System.out.print("Enter phone number: ");
             String phonenumber = scanner.next();
 
             profileController.createClientProfile(username, password, email, name, address, phonenumber);
