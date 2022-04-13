@@ -117,7 +117,7 @@ public class ConsoleUI {
                     System.out.println("Cancel a booking travel trip");
                     System.out.print("Please enter the Travel Slot Id for cancel : ");
                     int travelSlotId = scanner.nextInt();
-                    mainController.cancelBooking();
+                    mainController.cancelBooking(travelSlotId);
                     break;
                 }
                 case 9:
