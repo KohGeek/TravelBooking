@@ -1896,9 +1896,9 @@
 												"$ref": "AAAAAAF/WZWwEx980Nc="
 											},
 											"font": "Arial;13;1",
-											"left": 522,
+											"left": 520.5,
 											"top": 227.5,
-											"width": 88,
+											"width": 81,
 											"height": 13,
 											"text": "Edit travel slot"
 										},
@@ -1931,9 +1931,9 @@
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 517,
+									"left": 515.5,
 									"top": 220.5,
-									"width": 99.578125,
+									"width": 92.32275390625,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/WZWwEx993pA="
@@ -2033,7 +2033,7 @@
 							"containerChangeable": true,
 							"left": 496,
 							"top": 216,
-							"width": 140,
+							"width": 130,
 							"height": 35,
 							"autoResize": true,
 							"nameCompartment": {
@@ -2351,7 +2351,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 689,
+									"left": 688,
 									"top": 277,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -2372,7 +2372,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 685,
+									"left": 684,
 									"top": 291,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -2393,7 +2393,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 698,
+									"left": 695,
 									"top": 248,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -2477,7 +2477,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 649,
+									"left": 646,
 									"top": 266,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -2497,7 +2497,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 648,
+									"left": 644,
 									"top": 279,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -2517,7 +2517,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 653,
+									"left": 649,
 									"top": 238,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -2567,7 +2567,7 @@
 								"$ref": "AAAAAAF/WY47/gQwY4Y="
 							},
 							"lineStyle": 1,
-							"points": "759:288;629:251",
+							"points": "759:288;625:251",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF/WZY1lyZnhZA="
@@ -3736,7 +3736,7 @@
 									"font": "Arial;13;0",
 									"left": 324.5,
 									"top": 332.5,
-									"width": 98.8291015625,
+									"width": 98,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/Wkyt2scpVlI="
@@ -4576,7 +4576,7 @@
 									"font": "Arial;13;0",
 									"left": 212,
 									"top": 396.5,
-									"width": 134.9599609375,
+									"width": 134,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/tvvL/Y8OyMo="
@@ -5055,7 +5055,7 @@
 								"$ref": "AAAAAAF/WZWwEx97m/E="
 							},
 							"lineStyle": 1,
-							"points": "537:215;480:178",
+							"points": "533:215;478:178",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF/5X0gzu2sC8Q="
@@ -18755,7 +18755,7 @@
 											"top": 575,
 											"width": 479.64794921875,
 											"height": 13,
-											"text": "+viewTravelSlotDetail(travelSlotId: int): TravelSlot",
+											"text": "+getTravelSlotDetail(travelSlotId: int): TravelSlot",
 											"horizontalAlignment": 0
 										},
 										{
@@ -24712,7 +24712,7 @@
 									"_parent": {
 										"$ref": "AAAAAAF/5cSflqKu7fE="
 									},
-									"name": "viewTravelSlotDetail",
+									"name": "getTravelSlotDetail",
 									"parameters": [
 										{
 											"_type": "UMLParameter",

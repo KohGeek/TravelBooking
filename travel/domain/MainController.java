@@ -30,7 +30,7 @@ public class MainController {
      * @param travelSlotId
      * @return TravelSlot
      */
-    public TravelSlot viewTravelSlotDetail(int travelSlotId) {
+    public TravelSlot getTravelSlotDetail(int travelSlotId) {
         return travelSlotLists.getTravelSlotDetail(travelSlotId);
     }
 
