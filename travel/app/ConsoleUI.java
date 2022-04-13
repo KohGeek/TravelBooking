@@ -120,6 +120,18 @@ public class ConsoleUI {
                     mainController.cancelBooking(travelSlotId);
                     break;
                 }
+                case 3:
+                {
+                    System.out.println("Update Client Profile");
+                    System.out.print("Please enter username: ");
+                    String username = scanner.next();
+                    System.out.print("Please enter the detail value : ");
+                    String value = scanner.next();
+                    System.out.print("Please enter the type : ");
+                    int type = scanner.nextInt();
+                    profileController.updateClientProfile(username, value, type);
+                    break;
+                }
                 case 9:
                     return;
             }
