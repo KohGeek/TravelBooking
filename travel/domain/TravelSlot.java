@@ -18,6 +18,7 @@ public class TravelSlot {
      * @param id
      */
     public TravelSlot(int id) {
+
         this.id = id;
     }
 
@@ -28,6 +29,9 @@ public class TravelSlot {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
     /**
      * @return
      */
@@ -38,8 +42,8 @@ public class TravelSlot {
     /**
      * @param value
      */
-    public void setTime(String value) {
-        this.time = value;
+    public void setTime(String time) {
+        this.time = time;
     }
 
     /**
@@ -52,8 +56,8 @@ public class TravelSlot {
     /**
      * @param value
      */
-    public void setDate(String value) {
-        this.date = value;
+    public void setDate(String date) {
+        this.date = date;
     }
 
     /**
@@ -66,8 +70,8 @@ public class TravelSlot {
     /**
      * @param value
      */
-    public void setLocation(String value) {
-        this.location = value;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
     /**
@@ -80,8 +84,8 @@ public class TravelSlot {
     /**
      * @param value
      */
-    public void setPrice(float value) {
-        this.price = value;
+    public void setPrice(float price) {
+        this.price = price;
     }
 
 }
