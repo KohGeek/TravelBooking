@@ -20,12 +20,9 @@ public class TravelSlot {
     /**
      * @param id
      */
-    public TravelSlot(int id, String time, String date, String location, float price) {
+    public TravelSlot(int id) {
         this.id = id;
-        this.time = time;
-        this.date = date;
-        this.location = location;
-        this.price = price;
+        
     }
 
     /**
