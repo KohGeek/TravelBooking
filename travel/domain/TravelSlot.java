@@ -5,9 +5,6 @@ package travel.domain;
  */
 public class TravelSlot {
 
-    public TravelSlot() {
-    }
-
     /**
      * 
      */
@@ -22,7 +19,6 @@ public class TravelSlot {
      */
     public TravelSlot(int id) {
         this.id = id;
-        
     }
 
     /**
