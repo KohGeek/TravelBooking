@@ -1,84 +1,63 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package testingproject;
+package travel.domain;
 
 /**
  * 
  */
 public class ProfileController {
 
-    /**
-     * Default constructor
-     */
-    public ProfileController() {
-    }
-
-    /**
-     * 
-     */
     private IUserList userLists;
-
 
     /**
      * @param userDataFile
      */
-    public void ProfileController(String userDataFile) {
-        // TODO implement here
+    public ProfileController(String userDataFile) {
+        this.userLists = new UserLists(userDataFile);
     }
 
     /**
-     * @param username 
-     * @param password 
+     * @param username
+     * @param password
      * @return
      */
     public User login(String username, String password) {
-        // TODO implement here
-        return null;
+        return userLists.login(username, password);
     }
 
     /**
-     * @param username 
-     * @param password 
-     * @param email 
-     * @param name 
-     * @param address 
-     * @param phonenumber 
+     * @param username
+     * @param password
+     * @param email
+     * @param name
+     * @param address
+     * @param phonenumber
      * @return
      */
-    public User createClientProfile(String username, String password, String email, String name, String address, String phonenumber) {
-        
-        Client client=new Client();
-        client.User(username, password);
+    public User createClientProfile(String username, String password, String email, String name, String address,
+            String phonenumber) {
+        Client client = new Client(username, password);
         client.setEmail(email);
         client.setName(name);
         client.setAddress(address);
         client.setPhonenumber(phonenumber);
-        return client;
+        return userLists.createClientProfile(client);
     }
 
     /**
-     * @param username 
-     * @param value 
-     * @param type 
+     * @param username
+     * @param value
+     * @param type
      * @return
      */
-    public void updateClientProfile(String username, String phone, String  address) {
-        // TODO implement here
-        Client client=new Client();
-        client.User(username, "");
-        client.setAddress(address);
+    public void updateClientProfile(String username, String value, int type) {
+        userLists.updateClientProfile(username, value, type);
     }
 
     /**
-     * @param user 
+     * @param user
      * @return
      */
     public void updateUser(User user) {
-        // TODO implement here
-        return;
+        userLists.updateUser(user);
     }
 
 }
