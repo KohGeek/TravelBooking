@@ -69,7 +69,6 @@ public class ProfileController {
         // TODO implement here
         Client client=new Client();
         client.User(username, "");
-        client.setName(username);
         client.setAddress(address);
     }
 
