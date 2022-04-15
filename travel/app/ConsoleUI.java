@@ -98,6 +98,8 @@ public class ConsoleUI {
         System.out.println("Client Menu");
         System.out.println("1 . Book New Trip");
         System.out.println("2 . Cancel Booking");
+        System.out.println("3 . View Travel Slot Detail");
+        System.out.println("4 . Update Client Profile");
         System.out.println("9 . Exit");
 
         int option = scanner.nextInt();
@@ -121,6 +123,14 @@ public class ConsoleUI {
                     break;
                 }
                 case 3:
+                {
+                    System.out.println("View a travel slot details");
+                    System.out.print("Please enter the Travel Slot Id : ");
+                    int travelSlotId = scanner.nextInt();
+                    mainController.getTravelSlotDetail(travelSlotId);
+                    break;
+                }
+                case 4:
                 {
                     System.out.println("Update Client Profile");
                     System.out.print("Please enter username: ");
