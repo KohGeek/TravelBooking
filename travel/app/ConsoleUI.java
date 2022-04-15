@@ -25,7 +25,7 @@ public class ConsoleUI {
         int option = 0;
         do {
             System.out.println(
-                    "Admin Menu\n1. Create New Travel Slot\n2. Edit Travel Slot\n3. View Travel Slot Detail\n4. Search Travel Slots\n5. Remove Travel Slot\n9. Exit");
+                    "Admin Menu\n1. Create new travel slot\n2. Edit travel slot\n3. View travel slot detail\n4. Search travel slots\n5. Remove travel slot\n9. Exit");
 
             option = Integer.parseInt(scanner.nextLine());
             switch (option) {
@@ -99,7 +99,7 @@ public class ConsoleUI {
         int option = 0;
         do {
             System.out.println(
-                    "Client Menu\n1. Book New Trip\n2. Cancel Booking\n3. View Travel Slot Detail\n4. Update Client Profile\n9. Exit");
+                    "Client Menu\n1. Book new trip\n2. Cancel booking\n3. View travel slot detail\n4. Search travel slots\n5. Update client profile\n9. Exit");
 
             option = Integer.parseInt(scanner.nextLine());
             switch (option) {
@@ -129,6 +129,19 @@ public class ConsoleUI {
                     break;
                 }
                 case 4: {
+                    System.out.println("Search for travel slots");
+                    String location = this.scannerWrapper("Please enter location to search: ");
+                    List<TravelSlot> tsList = mainController.searchTravelSlots(location);
+                    for (TravelSlot ts : tsList) {
+                        System.out.println("ID:" + ts.getId());
+                        System.out.println("Time:" + ts.getTime());
+                        System.out.println("Date:" + ts.getDate());
+                        System.out.println("Location:" + ts.getLocation());
+                        System.out.println("Price:" + ts.getPrice() + "\n");
+                    }
+                    break;
+                }
+                case 5: {
                     System.out.println("Update Client Profile");
                     String username = this.scannerWrapper("Please enter username: ");
                     int type = Integer.parseInt(this.scannerWrapper(
