@@ -1,5 +1,6 @@
 package travel.app;
 
+import java.util.List;
 import java.util.Scanner;
 import travel.domain.*;
 
@@ -20,72 +21,71 @@ public class ConsoleUI {
      * @return
      */
     private void adminUI() {
-        System.out.println("Admin Menu");
-        System.out.println("1 . Create New Travel Slot");
-        System.out.println("2 . Edit Travel Slot");
-        System.out.println("3 . View Travel Slot Detail");
-        System.out.println("4 . Search Travel Slots");
-        System.out.println("5 . Remove Travel Slot");
-        System.out.println("9 . Exit");
 
-        int option = scanner.nextInt();
-
+        int option = 0;
         do {
+            System.out.println(
+                    "Admin Menu\n1. Create New Travel Slot\n2. Edit Travel Slot\n3. View Travel Slot Detail\n4. Search Travel Slots\n5. Remove Travel Slot\n9. Exit");
+
+            option = Integer.parseInt(scanner.nextLine());
             switch (option) {
-                case 1:
-                {
+                case 1: {
                     System.out.println("Create a new Travel Slot");
-                    System.out.print("Please enter the Travel Slot Id : ");
-                    int newTravelSlotId = scanner.nextInt();
-                    System.out.print("Please enter the Travel Time : ");
-                    String time = scanner.next();
-                    System.out.print("Please enter the Travel Date : ");
-                    String date = scanner.next();
-                    System.out.print("Please enter the Travel Location : ");
-                    String location = scanner.next();
-                    System.out.print("Please enter the Travel Price : ");
-                    float price = scanner.nextFloat();
-                    mainController.createTravelSlot(newTravelSlotId, time, date, location, price);
+                    int newTravelSlotId = (int) scannerWrapperNum("Please enter the Travel Slot ID: ");
+                    String time = this.scannerWrapper("Please enter the Travel Time: ");
+                    String date = this.scannerWrapper("Please enter the Travel Date: ");
+                    String location = this.scannerWrapper("Please enter the Travel Location: ");
+                    float price = scannerWrapperNum("Please enter the Travel Price: ");
+                    try {
+                        mainController.createTravelSlot(newTravelSlotId, time, date, location, price);
+                    } catch (IllegalArgumentException e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
                 }
-                case 2:
-                {
+                case 2: {
                     System.out.println("Edit a travel slot details");
-                    System.out.print("Please enter the Travel Slot Id : ");
-                    int travelSlotId = scanner.nextInt();
-                    System.out.print("Please enter the detail value : ");
-                    String value = scanner.next();
-                    System.out.print("Please enter the type : ");
-                    int type = scanner.nextInt();
+                    int travelSlotId = Integer.parseInt(this.scannerWrapper("Please enter the Travel Slot ID: "));
+                    String value = this.scannerWrapper("Please enter the detail value: ");
+                    int type = Integer.parseInt(this.scannerWrapper("Please enter the type: "));
                     mainController.editTravelSlot(travelSlotId, value, type);
                     break;
                 }
-                case 3:
-                {
+                case 3: {
                     System.out.println("View a travel slot details");
-                    System.out.print("Please enter the Travel Slot Id : ");
-                    int travelSlotId = scanner.nextInt();
-                    mainController.getTravelSlotDetail(travelSlotId);
+                    int travelSlotId = (int) scannerWrapperNum("Please enter the Travel Slot Id: ");
+                    TravelSlot ts = mainController.getTravelSlotDetail(travelSlotId);
+                    System.out.println("ID:" + ts.getId());
+                    System.out.println("Time:" + ts.getTime());
+                    System.out.println("Date:" + ts.getDate());
+                    System.out.println("Location:" + ts.getLocation());
+                    System.out.println("Price:" + ts.getPrice());
                     break;
                 }
-                case 4:
-                {
+                case 4: {
                     System.out.println("Search for travel slots");
-                    System.out.print("Please enter location to search : ");
-                    String location = scanner.next();
-                    mainController.searchTravelSlots(location);
+                    String location = this.scannerWrapper("Please enter location to search: ");
+                    List<TravelSlot> tsList = mainController.searchTravelSlots(location);
+                    for (TravelSlot ts : tsList) {
+                        System.out.println("ID:" + ts.getId());
+                        System.out.println("Time:" + ts.getTime());
+                        System.out.println("Date:" + ts.getDate());
+                        System.out.println("Location:" + ts.getLocation());
+                        System.out.println("Price:" + ts.getPrice() + "\n");
+                    }
                     break;
                 }
-                case 5:
-                {
+                case 5: {
                     System.out.println("Remove a travel slot");
-                    System.out.print("Please enter the Travel Slot Id for removal : ");
-                    int travelSlotId = scanner.nextInt();
+                    int travelSlotId = Integer
+                            .parseInt(scannerWrapper("Please enter the Travel Slot ID for removal: "));
                     mainController.removeTravelSlot(travelSlotId);
                     break;
                 }
                 case 9:
                     return;
+                default:
+                    System.out.println("Invalid option");
             }
         } while (option != 9);
 
@@ -95,45 +95,38 @@ public class ConsoleUI {
      * @return
      */
     private void clientUI() {
-        System.out.println("Client Menu");
-        System.out.println("1 . Book New Trip");
-        System.out.println("2 . Cancel Booking");
-        System.out.println("9 . Exit");
-
-        int option = scanner.nextInt();
-
+        int option = 0;
         do {
+            System.out.println("Client Menu\n1. Book New Trip\n2. Cancel Booking\n9. Exit");
+
+            option = Integer.parseInt(scanner.nextLine());
             switch (option) {
-                case 1:
-                {
+                case 1: {
                     System.out.println("Book a travel trip");
-                    System.out.print("Please enter the Travel Slot Id for booking : ");
-                    int travelSlotId = scanner.nextInt();
+                    int travelSlotId = (int) scannerWrapperNum("Please enter the Travel Slot ID for booking: ");
                     mainController.bookTrip(travelSlotId);
+                    profileController.updateUser(currentUser);
                     break;
                 }
-                case 2:
-                {
+                case 2: {
                     System.out.println("Cancel a booking travel trip");
-                    System.out.print("Please enter the Travel Slot Id for cancel : ");
-                    int travelSlotId = scanner.nextInt();
+                    int travelSlotId = (int) scannerWrapperNum("Please enter the Travel Slot ID for cancel: ");
                     mainController.cancelBooking(travelSlotId);
+                    profileController.updateUser(currentUser);
                     break;
                 }
-                case 3:
-                {
+                case 3: {
                     System.out.println("Update Client Profile");
-                    System.out.print("Please enter username: ");
-                    String username = scanner.next();
-                    System.out.print("Please enter the detail value : ");
-                    String value = scanner.next();
-                    System.out.print("Please enter the type : ");
-                    int type = scanner.nextInt();
+                    String username = this.scannerWrapper("Please enter username: ");
+                    String value = this.scannerWrapper("Please enter the detail value: ");
+                    int type = Integer.parseInt(this.scannerWrapper("Please enter the type: "));
                     profileController.updateClientProfile(username, value, type);
                     break;
                 }
                 case 9:
                     return;
+                default:
+                    System.out.println("Invalid option");
             }
         } while (option != 9);
 
@@ -143,15 +136,17 @@ public class ConsoleUI {
      * @return
      */
     private void loginUI() {
-        System.out.print("Enter username: ");
-        String username = scanner.next();
-        System.out.print("Enter password: ");
-        String password = scanner.next();
+        System.out.println("\n--Login--");
+        String username = this.scannerWrapper("Enter username: ");
+        String password = this.scannerWrapper("Enter password: ");
         currentUser = profileController.login(username, password);
+        mainController.setCurrentUser(currentUser);
         if (currentUser instanceof Admin) {
             adminUI();
-        } else {
+        } else if (currentUser instanceof Client) {
             clientUI();
+        } else {
+            System.out.println("Invalid username or password");
         }
     }
 
@@ -159,28 +154,47 @@ public class ConsoleUI {
      * @return
      */
     public void start() {
-        System.out.println(" 1 Login | 2 Create Profile");
-        int choice = scanner.nextInt();
-        if (choice == 1) {
-            loginUI();
+        int choice = 0;
+        while (choice != 9) {
+            System.out.println("Welcome to Travel Booking System\n");
+            choice = (int) scannerWrapperNum("1) Login \n2) Create Profile\n9) Exit");
+            if (choice == 1) {
+                loginUI();
+            } else if (choice == 2) {
+                String username = this.scannerWrapper("Enter username: ");
+                String password = this.scannerWrapper("Enter password: ");
+                String email = this.scannerWrapper("Enter email: ");
+                String name = this.scannerWrapper("Enter name: ");
+                String address = this.scannerWrapper("Enter address: ");
+                String phonenumber = this.scannerWrapper("Enter phone number: ");
+                profileController.createClientProfile(username, password, email, name, address, phonenumber);
+                loginUI();
+            } else if (choice == 9) {
+                System.out.println("Bye");
+            } else {
+                System.out.println("Invalid choice");
+            }
         }
-        if (choice == 2) {
-            System.out.print("Enter username: ");
-            String username = scanner.next();
-            System.out.print("Enter password: ");
-            String password = scanner.next();
-            System.out.print("Enter email: ");
-            String email = scanner.next();
-            System.out.print("Enter name: ");
-            String name = scanner.next();
-            System.out.print("Enter address: ");
-            String address = scanner.next();
-            System.out.print("Enter phone number: ");
-            String phonenumber = scanner.next();
+    }
 
-            profileController.createClientProfile(username, password, email, name, address, phonenumber);
-            loginUI();
-        }
+    private String scannerWrapper(String message) {
+        System.out.println(message);
+        return scanner.nextLine();
+    }
+
+    private float scannerWrapperNum(String message) {
+        float value = 0;
+        boolean valid = false;
+        System.out.println(message);
+        do {
+            try {
+                value = Float.parseFloat(scanner.nextLine());
+                valid = true;
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input, must be number");
+            }
+        } while (!valid);
+        return value;
     }
 
 }

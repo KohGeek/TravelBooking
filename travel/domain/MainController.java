@@ -57,8 +57,10 @@ public class MainController {
      * @param location
      * @param price
      */
-    public void createTravelSlot(int id, String time, String date, String location, float price) {
-        TravelSlot newTravelSlot = new TravelSlot(id);
+    public void createTravelSlot(int id, String time, String date, String location, float price)
+            throws IllegalArgumentException {
+        TravelSlot newTravelSlot;
+        newTravelSlot = new TravelSlot(id);
         newTravelSlot.setTime(time);
         newTravelSlot.setDate(date);
         newTravelSlot.setLocation(location);
@@ -96,5 +98,4 @@ public class MainController {
     public void setCurrentUser(User user) {
         this.currentUser = user;
     }
-
 }

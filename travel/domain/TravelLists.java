@@ -27,7 +27,12 @@ public class TravelLists implements IDataList {
      * @param travelSlot
      * @return
      */
-    public void createTravelSlot(TravelSlot travelSlot) {
+    public void createTravelSlot(TravelSlot travelSlot) throws IllegalArgumentException {
+        for (TravelSlot temp : this.travelSlots) {
+            if (temp.getId() == travelSlot.getId()) {
+                throw new IllegalArgumentException("Travel slot ID already exists");
+            }
+        }
         travelSlots.add(travelSlot);
         saveTravelFile();
     }
@@ -37,9 +42,11 @@ public class TravelLists implements IDataList {
      * @return
      */
     public void removeTravelSlot(int travelSlotId) {
-        for (TravelSlot travelSlot : travelSlots) {
-            if (travelSlot.getId() == travelSlotId)
-                travelSlots.remove(travelSlot);
+        for (int i = 0; i < this.travelSlots.size(); i++) {
+            if (this.travelSlots.get(i).getId() == travelSlotId) {
+                travelSlots.remove(i);
+                break;
+            }
         }
         saveTravelFile();
     }
@@ -97,10 +104,11 @@ public class TravelLists implements IDataList {
     private void saveTravelFile() {
         try (FileOutputStream fileOutput = new FileOutputStream(travelDataFile)) {
 
-            CSVPrinter csvPrinter = new CSVPrinter(new OutputStreamWriter(fileOutput), CSVFormat.DEFAULT);
-            for (TravelSlot travelSlot : travelSlots) {
-                csvPrinter.printRecord(travelSlot.getId(), travelSlot.getTime(), travelSlot.getDate(),
-                        travelSlot.getLocation(), travelSlot.getPrice());
+            try (CSVPrinter csvPrinter = new CSVPrinter(new OutputStreamWriter(fileOutput), CSVFormat.DEFAULT)) {
+                for (TravelSlot travelSlot : travelSlots) {
+                    csvPrinter.printRecord(travelSlot.getId(), travelSlot.getTime(), travelSlot.getDate(),
+                            travelSlot.getLocation(), travelSlot.getPrice());
+                }
             }
 
         } catch (FileNotFoundException e) {
@@ -118,14 +126,15 @@ public class TravelLists implements IDataList {
      */
     private void loadTravelFile() {
         try (FileInputStream fileInput = new FileInputStream(travelDataFile)) {
-            CSVParser csvParser = new CSVParser(new InputStreamReader(fileInput), CSVFormat.DEFAULT);
-            for (CSVRecord csvRecord : csvParser) {
-                TravelSlot travelSlot = new TravelSlot(Integer.parseInt(csvRecord.get(0)));
-                travelSlot.setTime(csvRecord.get(1));
-                travelSlot.setDate(csvRecord.get(2));
-                travelSlot.setLocation(csvRecord.get(3));
-                travelSlot.setPrice(Float.parseFloat(csvRecord.get(4)));
-                travelSlots.add(travelSlot);
+            try (CSVParser csvParser = new CSVParser(new InputStreamReader(fileInput), CSVFormat.DEFAULT)) {
+                for (CSVRecord csvRecord : csvParser) {
+                    TravelSlot travelSlot = new TravelSlot(Integer.parseInt(csvRecord.get(0)));
+                    travelSlot.setTime(csvRecord.get(1));
+                    travelSlot.setDate(csvRecord.get(2));
+                    travelSlot.setLocation(csvRecord.get(3));
+                    travelSlot.setPrice(Float.parseFloat(csvRecord.get(4)));
+                    travelSlots.add(travelSlot);
+                }
             }
         } catch (FileNotFoundException exc) {
             System.out.println(travelDataFile + " not found.");
