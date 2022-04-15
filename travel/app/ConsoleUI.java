@@ -46,8 +46,9 @@ public class ConsoleUI {
                 case 2: {
                     System.out.println("Edit a travel slot details");
                     int travelSlotId = Integer.parseInt(this.scannerWrapper("Please enter the Travel Slot ID: "));
-                    String value = this.scannerWrapper("Please enter the detail value: ");
-                    int type = Integer.parseInt(this.scannerWrapper("Please enter the type: "));
+                    String value = this.scannerWrapper("Please enter the value: ");
+                    int type = Integer.parseInt(
+                            this.scannerWrapper("Please enter data to change (1 - Date, 2 - Time, 3 - Price):  "));
                     mainController.editTravelSlot(travelSlotId, value, type);
                     break;
                 }
@@ -125,8 +126,10 @@ public class ConsoleUI {
                 case 4: {
                     System.out.println("Update Client Profile");
                     String username = this.scannerWrapper("Please enter username: ");
-                    String value = this.scannerWrapper("Please enter the detail value: ");
-                    int type = Integer.parseInt(this.scannerWrapper("Please enter the type: "));
+                    int type = Integer.parseInt(this.scannerWrapper(
+                            "Please enter data to change (1 - Email, 2 - Phone Number, 3 - Address): "));
+                    String value = this.scannerWrapper("Please enter the value: ");
+
                     profileController.updateClientProfile(username, value, type);
                     break;
                 }
