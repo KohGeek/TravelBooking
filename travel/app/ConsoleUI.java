@@ -120,7 +120,12 @@ public class ConsoleUI {
                 case 3: {
                     System.out.println("View a travel slot details");
                     int travelSlotId = (int) this.scannerWrapperNum("Please enter the Travel Slot ID : ");
-                    mainController.getTravelSlotDetail(travelSlotId);
+                    TravelSlot ts = mainController.getTravelSlotDetail(travelSlotId);
+                    System.out.println("ID:" + ts.getId());
+                    System.out.println("Time:" + ts.getTime());
+                    System.out.println("Date:" + ts.getDate());
+                    System.out.println("Location:" + ts.getLocation());
+                    System.out.println("Price:" + ts.getPrice());
                     break;
                 }
                 case 4: {
