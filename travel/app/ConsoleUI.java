@@ -97,7 +97,8 @@ public class ConsoleUI {
     private void clientUI() {
         int option = 0;
         do {
-            System.out.println("Client Menu\n1. Book New Trip\n2. Cancel Booking\n9. Exit");
+            System.out.println(
+                    "Client Menu\n1. Book New Trip\n2. Cancel Booking\n3. View Travel Slot Detail\n4. Update Client Profile\n9. Exit");
 
             option = Integer.parseInt(scanner.nextLine());
             switch (option) {
@@ -116,6 +117,12 @@ public class ConsoleUI {
                     break;
                 }
                 case 3: {
+                    System.out.println("View a travel slot details");
+                    int travelSlotId = (int) this.scannerWrapperNum("Please enter the Travel Slot ID : ");
+                    mainController.getTravelSlotDetail(travelSlotId);
+                    break;
+                }
+                case 4: {
                     System.out.println("Update Client Profile");
                     String username = this.scannerWrapper("Please enter username: ");
                     String value = this.scannerWrapper("Please enter the detail value: ");

@@ -3391,7 +3391,7 @@
 											"top": 131.5,
 											"width": 161,
 											"height": 13,
-											"text": "View travel slot detail"
+											"text": "Get travel slot detail"
 										},
 										{
 											"_type": "LabelView",
@@ -5442,7 +5442,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF/WYhXuAOqiqE="
 					},
-					"name": "View travel slot detail",
+					"name": "Get travel slot detail",
 					"ownedElements": [
 						{
 							"_type": "UMLExtend",
@@ -6045,7 +6045,7 @@
 											"top": 650,
 											"width": 156.78076171875,
 											"height": 13,
-											"text": "setTime(value: String)",
+											"text": "setTime(time: String)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -6079,7 +6079,7 @@
 											"top": 680,
 											"width": 156.78076171875,
 											"height": 13,
-											"text": "setDate(value: String)",
+											"text": "setDate(date: String)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -6113,7 +6113,7 @@
 											"top": 710,
 											"width": 156.78076171875,
 											"height": 13,
-											"text": "setLocation(value: String)",
+											"text": "setLocation(location: String)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -6147,7 +6147,7 @@
 											"top": 740,
 											"width": 156.78076171875,
 											"height": 13,
-											"text": "setPrice(value: float)",
+											"text": "setPrice(price: float)",
 											"horizontalAlignment": 0
 										}
 									],
@@ -17292,7 +17292,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 261,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "«entity»"
 										},
@@ -17305,7 +17305,7 @@
 											"font": "Arial;13;1",
 											"left": 765,
 											"top": 276,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "TravelSlot"
 										},
@@ -17340,7 +17340,7 @@
 									"font": "Arial;13;0",
 									"left": 760,
 									"top": 256,
-									"width": 155.12646484375,
+									"width": 165.94921875,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/5cSflKGsGAk="
@@ -17377,7 +17377,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 299,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "-id: int",
 											"horizontalAlignment": 0
@@ -17394,7 +17394,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 314,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "-time: String",
 											"horizontalAlignment": 0
@@ -17411,7 +17411,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 329,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "-date: String",
 											"horizontalAlignment": 0
@@ -17428,7 +17428,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 344,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "-location: String",
 											"horizontalAlignment": 0
@@ -17445,7 +17445,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 359,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "-price: float",
 											"horizontalAlignment": 0
@@ -17454,7 +17454,7 @@
 									"font": "Arial;13;0",
 									"left": 760,
 									"top": 294,
-									"width": 155.12646484375,
+									"width": 165.94921875,
 									"height": 83
 								},
 								{
@@ -17479,7 +17479,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 382,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "«create»+TravelSlot(id: int)",
 											"horizontalAlignment": 0
@@ -17496,7 +17496,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 397,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "+getId(): int",
 											"horizontalAlignment": 0
@@ -17513,7 +17513,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 412,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "+getTime(): String",
 											"horizontalAlignment": 0
@@ -17530,7 +17530,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 427,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "+setTime(value: String)",
 											"horizontalAlignment": 0
@@ -17547,7 +17547,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 442,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "+getDate(): String",
 											"horizontalAlignment": 0
@@ -17564,7 +17564,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 457,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "+setDate(value: String)",
 											"horizontalAlignment": 0
@@ -17581,7 +17581,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 472,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "+getLocation(): String",
 											"horizontalAlignment": 0
@@ -17598,7 +17598,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 487,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "+setLocation(value: String)",
 											"horizontalAlignment": 0
@@ -17615,7 +17615,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 502,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "+getPrice(): float",
 											"horizontalAlignment": 0
@@ -17632,7 +17632,7 @@
 											"font": "Arial;13;0",
 											"left": 765,
 											"top": 517,
-											"width": 145.12646484375,
+											"width": 155.94921875,
 											"height": 13,
 											"text": "+setPrice(value: float)",
 											"horizontalAlignment": 0
@@ -17641,7 +17641,7 @@
 									"font": "Arial;13;0",
 									"left": 760,
 									"top": 377,
-									"width": 155.12646484375,
+									"width": 165.94921875,
 									"height": 158
 								},
 								{
@@ -17681,7 +17681,7 @@
 							"containerChangeable": true,
 							"left": 760,
 							"top": 256,
-							"width": 155.12646484375,
+							"width": 165.94921875,
 							"height": 279,
 							"autoResize": true,
 							"nameCompartment": {
@@ -18583,7 +18583,7 @@
 											"font": "Arial;13;0",
 											"left": 213,
 											"top": 469,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "«control»"
 										},
@@ -18596,7 +18596,7 @@
 											"font": "Arial;13;1",
 											"left": 213,
 											"top": 484,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "MainController"
 										},
@@ -18631,7 +18631,7 @@
 									"font": "Arial;13;0",
 									"left": 208,
 									"top": 464,
-									"width": 457.33203125,
+									"width": 489.64794921875,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/5cSflaHy57s="
@@ -18668,7 +18668,7 @@
 											"font": "Arial;13;0",
 											"left": 213,
 											"top": 507,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "-travelSlotLists: IDataList",
 											"horizontalAlignment": 0
@@ -18685,7 +18685,7 @@
 											"font": "Arial;13;0",
 											"left": 213,
 											"top": 522,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "-currentUser: User",
 											"horizontalAlignment": 0
@@ -18694,7 +18694,7 @@
 									"font": "Arial;13;0",
 									"left": 208,
 									"top": 502,
-									"width": 457.33203125,
+									"width": 489.64794921875,
 									"height": 38
 								},
 								{
@@ -18719,7 +18719,7 @@
 											"font": "Arial;13;0",
 											"left": 213,
 											"top": 545,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "«create»+MainController(travelDataFile: String)",
 											"horizontalAlignment": 0
@@ -18736,7 +18736,7 @@
 											"font": "Arial;13;0",
 											"left": 213,
 											"top": 560,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "+searchTravelSlots(location: String): List<TravelSlot>",
 											"horizontalAlignment": 0
@@ -18753,7 +18753,7 @@
 											"font": "Arial;13;0",
 											"left": 213,
 											"top": 575,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "+getTravelSlotDetail(travelSlotId: int): TravelSlot",
 											"horizontalAlignment": 0
@@ -18770,7 +18770,7 @@
 											"font": "Arial;13;0",
 											"left": 213,
 											"top": 590,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "+editTravelSlot(travelSlotId: int, value: String, type: int): void",
 											"horizontalAlignment": 0
@@ -18787,7 +18787,7 @@
 											"font": "Arial;13;0",
 											"left": 213,
 											"top": 605,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "+removeTravelSlot(travelSlotId: int): void",
 											"horizontalAlignment": 0
@@ -18804,7 +18804,7 @@
 											"font": "Arial;13;0",
 											"left": 213,
 											"top": 620,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "+createTravelSlot(id: int, time: String, date: String, location: String, price: float): void",
 											"horizontalAlignment": 0
@@ -18821,7 +18821,7 @@
 											"font": "Arial;13;0",
 											"left": 213,
 											"top": 635,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "+bookTrip(travelSlotId: int): void",
 											"horizontalAlignment": 0
@@ -18838,7 +18838,7 @@
 											"font": "Arial;13;0",
 											"left": 213,
 											"top": 650,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "+cancelBooking(travelSlotId: int): void",
 											"horizontalAlignment": 0
@@ -18855,7 +18855,7 @@
 											"font": "Arial;13;0",
 											"left": 213,
 											"top": 665,
-											"width": 447.33203125,
+											"width": 479.64794921875,
 											"height": 13,
 											"text": "+setCurrentUser(user: User): void",
 											"horizontalAlignment": 0
@@ -18864,7 +18864,7 @@
 									"font": "Arial;13;0",
 									"left": 208,
 									"top": 540,
-									"width": 457.33203125,
+									"width": 489.64794921875,
 									"height": 143
 								},
 								{
@@ -18904,7 +18904,7 @@
 							"containerChangeable": true,
 							"left": 208,
 							"top": 464,
-							"width": 457.33203125,
+							"width": 489.64794921875,
 							"height": 219,
 							"autoResize": true,
 							"nameCompartment": {
@@ -19298,7 +19298,7 @@
 											"font": "Arial;13;1",
 											"left": 613,
 											"top": 15,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "TravelLists"
 										},
@@ -19333,7 +19333,7 @@
 									"font": "Arial;13;0",
 									"left": 608,
 									"top": 8,
-									"width": 334.60009765625,
+									"width": 354.5380859375,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/5cSflaIbQsw="
@@ -19370,7 +19370,7 @@
 											"font": "Arial;13;0",
 											"left": 613,
 											"top": 38,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "-travelslots: List<TravelSlot>",
 											"horizontalAlignment": 0
@@ -19387,7 +19387,7 @@
 											"font": "Arial;13;0",
 											"left": 613,
 											"top": 53,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "-travelDataFile: String",
 											"horizontalAlignment": 0
@@ -19396,7 +19396,7 @@
 									"font": "Arial;13;0",
 									"left": 608,
 									"top": 33,
-									"width": 334.60009765625,
+									"width": 354.5380859375,
 									"height": 38
 								},
 								{
@@ -19421,7 +19421,7 @@
 											"font": "Arial;13;0",
 											"left": 613,
 											"top": 76,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "«create»+TravelLists(travelDataFile: String)",
 											"horizontalAlignment": 0
@@ -19438,7 +19438,7 @@
 											"font": "Arial;13;0",
 											"left": 613,
 											"top": 91,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "+createTravelSlot(travelSlot: TravelSlot): void",
 											"horizontalAlignment": 0
@@ -19455,7 +19455,7 @@
 											"font": "Arial;13;0",
 											"left": 613,
 											"top": 106,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "+removeTravelSlot(travelSlotId: int): void",
 											"horizontalAlignment": 0
@@ -19472,7 +19472,7 @@
 											"font": "Arial;13;0",
 											"left": 613,
 											"top": 121,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "+searchTravelSlots(location: String): List<TravelSlot>",
 											"horizontalAlignment": 0
@@ -19489,7 +19489,7 @@
 											"font": "Arial;13;0",
 											"left": 613,
 											"top": 136,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "+editTravelSlot(travelSlotId: int, value: String, type: int): void",
 											"horizontalAlignment": 0
@@ -19506,7 +19506,7 @@
 											"font": "Arial;13;0",
 											"left": 613,
 											"top": 151,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "+getTravelSlotDetail(id: int): TravelSlot",
 											"horizontalAlignment": 0
@@ -19523,7 +19523,7 @@
 											"font": "Arial;13;0",
 											"left": 613,
 											"top": 166,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "-saveTravelFile(): void",
 											"horizontalAlignment": 0
@@ -19540,7 +19540,7 @@
 											"font": "Arial;13;0",
 											"left": 613,
 											"top": 181,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "-loadTravelFile(): void",
 											"horizontalAlignment": 0
@@ -19549,7 +19549,7 @@
 									"font": "Arial;13;0",
 									"left": 608,
 									"top": 71,
-									"width": 334.60009765625,
+									"width": 354.5380859375,
 									"height": 128
 								},
 								{
@@ -19589,7 +19589,7 @@
 							"containerChangeable": true,
 							"left": 608,
 							"top": 8,
-							"width": 334.60009765625,
+							"width": 354.5380859375,
 							"height": 191,
 							"autoResize": true,
 							"nameCompartment": {
@@ -19637,7 +19637,7 @@
 											"font": "Arial;13;0",
 											"left": 397,
 											"top": 293,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "«interface»"
 										},
@@ -19650,7 +19650,7 @@
 											"font": "Arial;13;1",
 											"left": 397,
 											"top": 308,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "IDataList"
 										},
@@ -19685,7 +19685,7 @@
 									"font": "Arial;13;0",
 									"left": 392,
 									"top": 288,
-									"width": 334.60009765625,
+									"width": 354.5380859375,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/5cSflaIrDig="
@@ -19738,7 +19738,7 @@
 											"font": "Arial;13;0",
 											"left": 397,
 											"top": 331,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "+createTravelSlot(travelSlot: TravelSlot): void",
 											"horizontalAlignment": 0
@@ -19755,7 +19755,7 @@
 											"font": "Arial;13;0",
 											"left": 397,
 											"top": 346,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "+removeTravelSlot(travelSlotId: int): void",
 											"horizontalAlignment": 0
@@ -19772,7 +19772,7 @@
 											"font": "Arial;13;0",
 											"left": 397,
 											"top": 361,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "+searchTravelSlots(location: String): List<TravelSlot>",
 											"horizontalAlignment": 0
@@ -19789,7 +19789,7 @@
 											"font": "Arial;13;0",
 											"left": 397,
 											"top": 376,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "+editTravelSlot(travelSlotId: int, value: String, type: int): void",
 											"horizontalAlignment": 0
@@ -19806,7 +19806,7 @@
 											"font": "Arial;13;0",
 											"left": 397,
 											"top": 391,
-											"width": 324.60009765625,
+											"width": 344.5380859375,
 											"height": 13,
 											"text": "+getTravelSlotDetail(id: int): TravelSlot",
 											"horizontalAlignment": 0
@@ -19815,7 +19815,7 @@
 									"font": "Arial;13;0",
 									"left": 392,
 									"top": 326,
-									"width": 334.60009765625,
+									"width": 354.5380859375,
 									"height": 83
 								},
 								{
@@ -19855,7 +19855,7 @@
 							"containerChangeable": true,
 							"left": 392,
 							"top": 288,
-							"width": 334.60009765625,
+							"width": 354.5380859375,
 							"height": 121,
 							"autoResize": true,
 							"nameCompartment": {
@@ -19904,7 +19904,7 @@
 											"font": "Arial;13;0",
 											"left": 61,
 											"top": 757,
-											"width": 676.35546875,
+											"width": 743.86279296875,
 											"height": 13,
 											"text": "«control»"
 										},
@@ -19917,7 +19917,7 @@
 											"font": "Arial;13;1",
 											"left": 61,
 											"top": 772,
-											"width": 676.35546875,
+											"width": 743.86279296875,
 											"height": 13,
 											"text": "ProfileController"
 										},
@@ -19952,7 +19952,7 @@
 									"font": "Arial;13;0",
 									"left": 56,
 									"top": 752,
-									"width": 686.35546875,
+									"width": 753.86279296875,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/5cSflaJRD44="
@@ -19989,7 +19989,7 @@
 											"font": "Arial;13;0",
 											"left": 61,
 											"top": 795,
-											"width": 676.35546875,
+											"width": 743.86279296875,
 											"height": 13,
 											"text": "-userLists: IUserList",
 											"horizontalAlignment": 0
@@ -19998,7 +19998,7 @@
 									"font": "Arial;13;0",
 									"left": 56,
 									"top": 790,
-									"width": 686.35546875,
+									"width": 753.86279296875,
 									"height": 23
 								},
 								{
@@ -20023,7 +20023,7 @@
 											"font": "Arial;13;0",
 											"left": 61,
 											"top": 818,
-											"width": 676.35546875,
+											"width": 743.86279296875,
 											"height": 13,
 											"text": "«create»+ProfileController(userDataFile: String)",
 											"horizontalAlignment": 0
@@ -20040,7 +20040,7 @@
 											"font": "Arial;13;0",
 											"left": 61,
 											"top": 833,
-											"width": 676.35546875,
+											"width": 743.86279296875,
 											"height": 13,
 											"text": "+login(username: String, password: String): User",
 											"horizontalAlignment": 0
@@ -20057,7 +20057,7 @@
 											"font": "Arial;13;0",
 											"left": 61,
 											"top": 848,
-											"width": 676.35546875,
+											"width": 743.86279296875,
 											"height": 13,
 											"text": "+createClientProfile(username: String, password: String, email: String, name: String, address: String, phonenumber: String): User",
 											"horizontalAlignment": 0
@@ -20074,7 +20074,7 @@
 											"font": "Arial;13;0",
 											"left": 61,
 											"top": 863,
-											"width": 676.35546875,
+											"width": 743.86279296875,
 											"height": 13,
 											"text": "+updateClientProfile(username: String, value: String, type: int): void",
 											"horizontalAlignment": 0
@@ -20091,7 +20091,7 @@
 											"font": "Arial;13;0",
 											"left": 61,
 											"top": 878,
-											"width": 676.35546875,
+											"width": 743.86279296875,
 											"height": 13,
 											"text": "+updateUser(user: User): void",
 											"horizontalAlignment": 0
@@ -20100,7 +20100,7 @@
 									"font": "Arial;13;0",
 									"left": 56,
 									"top": 813,
-									"width": 686.35546875,
+									"width": 753.86279296875,
 									"height": 83
 								},
 								{
@@ -20140,7 +20140,7 @@
 							"containerChangeable": true,
 							"left": 56,
 							"top": 752,
-							"width": 686.35546875,
+							"width": 753.86279296875,
 							"height": 144,
 							"autoResize": true,
 							"nameCompartment": {
@@ -20180,7 +20180,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 815,
+									"left": 822,
 									"top": 217,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -20201,7 +20201,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 830,
+									"left": 837,
 									"top": 214,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -20222,7 +20222,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 786,
+									"left": 793,
 									"top": 224,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -20243,7 +20243,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 815,
+									"left": 822,
 									"top": 215,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -20264,8 +20264,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 828,
-									"top": 214,
+									"left": 836,
+									"top": 215,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -20285,7 +20285,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 787,
+									"left": 794,
 									"top": 216,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -20306,7 +20306,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 816,
+									"left": 823,
 									"top": 220,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -20326,7 +20326,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 828,
+									"left": 836,
 									"top": 215,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -20345,7 +20345,7 @@
 										"$ref": "AAAAAAF/5cSfl6Mg/0w="
 									},
 									"font": "Arial;13;0",
-									"left": 819,
+									"left": 826,
 									"top": 235,
 									"width": 19.5126953125,
 									"height": 13,
@@ -20397,7 +20397,7 @@
 								"$ref": "AAAAAAF/5cSflaIZCtM="
 							},
 							"lineStyle": 1,
-							"points": "795:199;807:255",
+							"points": "803:199;814:255",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF/5cSflqJjTLI="
@@ -20454,7 +20454,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 661,
+									"left": 671,
 									"top": 246,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -20475,7 +20475,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 672,
+									"left": 682,
 									"top": 256,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -20496,7 +20496,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 638,
+									"left": 648,
 									"top": 227,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -20515,7 +20515,7 @@
 								"$ref": "AAAAAAF/5cSflaIZCtM="
 							},
 							"lineStyle": 1,
-							"points": "689:199;612:287",
+							"points": "699:199;622:287",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF/5cSflqJvpYE="
@@ -20548,7 +20548,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 324,
+									"left": 331,
 									"top": 363,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -20569,7 +20569,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 337,
+									"left": 343,
 									"top": 355,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -20590,7 +20590,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 299,
+									"left": 306,
 									"top": 380,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -20611,7 +20611,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 284,
+									"left": 288,
 									"top": 300,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -20632,8 +20632,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 297,
-									"top": 295,
+									"left": 301,
+									"top": 294,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -20653,7 +20653,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 259,
+									"left": 263,
 									"top": 311,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -20674,7 +20674,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 350,
+									"left": 360,
 									"top": 427,
 									"width": 28.89453125,
 									"height": 13,
@@ -20696,7 +20696,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 374,
+									"left": 384,
 									"top": 417,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -20715,8 +20715,8 @@
 										"$ref": "AAAAAAF/5cSfl6LfGag="
 									},
 									"font": "Arial;13;0",
-									"left": 371,
-									"top": 440,
+									"left": 381,
+									"top": 439,
 									"width": 7.22998046875,
 									"height": 13,
 									"alpha": 5.256588115516369,
@@ -20767,7 +20767,7 @@
 								"$ref": "AAAAAAF/5cSflaIHL/U="
 							},
 							"lineStyle": 1,
-							"points": "258:293;366:463",
+							"points": "262:293;377:463",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF/5cSflqJzmcw="
@@ -20824,8 +20824,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 496,
-									"top": 422,
+									"left": 509,
+									"top": 423,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -20845,8 +20845,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 483,
-									"top": 415,
+									"left": 496,
+									"top": 416,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -20866,8 +20866,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 523,
-									"top": 437,
+									"left": 536,
+									"top": 436,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -20887,7 +20887,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 495,
+									"left": 507,
 									"top": 427,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -20908,7 +20908,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 484,
+									"left": 496,
 									"top": 418,
 									"height": 13,
 									"alpha": 0.7853981633974483,
@@ -20929,7 +20929,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 517,
+									"left": 530,
 									"top": 443,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -20950,8 +20950,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 499,
-									"top": 418,
+									"left": 511,
+									"top": 419,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -20970,8 +20970,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 486,
-									"top": 414,
+									"left": 498,
+									"top": 415,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -20989,7 +20989,7 @@
 										"$ref": "AAAAAAF/5cSflqK0V+o="
 									},
 									"font": "Arial;13;0",
-									"left": 522,
+									"left": 535,
 									"top": 427,
 									"width": 7.22998046875,
 									"height": 13,
@@ -21041,7 +21041,7 @@
 								"$ref": "AAAAAAF/5cSflaHwpz0="
 							},
 							"lineStyle": 1,
-							"points": "496:463;525:409",
+							"points": "509:463;537:409",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF/5cSflqKL/wk="
@@ -21098,8 +21098,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 207,
-									"top": 685,
+									"left": 206,
+									"top": 684,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -21119,8 +21119,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 215,
-									"top": 672,
+									"left": 213,
+									"top": 671,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -21140,8 +21140,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 192,
-									"top": 710,
+									"left": 193,
+									"top": 711,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -21224,8 +21224,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 263,
-									"top": 718,
+									"left": 275,
+									"top": 719,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -21244,7 +21244,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 268,
+									"left": 279,
 									"top": 706,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -21263,8 +21263,8 @@
 										"$ref": "AAAAAAF/5cSfl6LihGM="
 									},
 									"font": "Arial;13;0",
-									"left": 201,
-									"top": 716,
+									"left": 213,
+									"top": 721,
 									"width": 7.22998046875,
 									"height": 13,
 									"alpha": 0.17241517583566823,
@@ -21315,7 +21315,7 @@
 								"$ref": "AAAAAAF/5cSflaIHL/U="
 							},
 							"lineStyle": 1,
-							"points": "198:293;200:704;278:751",
+							"points": "198:293;200:704;292:751",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF/5cSflqKXcWk="
@@ -21380,7 +21380,7 @@
 											"font": "Arial;13;0",
 											"left": 237,
 											"top": 1045,
-											"width": 362.24169921875,
+											"width": 392.005859375,
 											"height": 13,
 											"text": "«interface»"
 										},
@@ -21393,7 +21393,7 @@
 											"font": "Arial;13;1",
 											"left": 237,
 											"top": 1060,
-											"width": 362.24169921875,
+											"width": 392.005859375,
 											"height": 13,
 											"text": "IUserList"
 										},
@@ -21428,7 +21428,7 @@
 									"font": "Arial;13;0",
 									"left": 232,
 									"top": 1040,
-									"width": 372.24169921875,
+									"width": 402.005859375,
 									"height": 38,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF/5ciGtcMfWoE="
@@ -21481,7 +21481,7 @@
 											"font": "Arial;13;0",
 											"left": 237,
 											"top": 1083,
-											"width": 362.24169921875,
+											"width": 392.005859375,
 											"height": 13,
 											"text": "+login(username: String, password: String): User",
 											"horizontalAlignment": 0
@@ -21498,7 +21498,7 @@
 											"font": "Arial;13;0",
 											"left": 237,
 											"top": 1098,
-											"width": 362.24169921875,
+											"width": 392.005859375,
 											"height": 13,
 											"text": "+createClientProfile(user: User): User",
 											"horizontalAlignment": 0
@@ -21515,7 +21515,7 @@
 											"font": "Arial;13;0",
 											"left": 237,
 											"top": 1113,
-											"width": 362.24169921875,
+											"width": 392.005859375,
 											"height": 13,
 											"text": "+updateClientProfile(username: String, value : String, type: int): void",
 											"horizontalAlignment": 0
@@ -21532,7 +21532,7 @@
 											"font": "Arial;13;0",
 											"left": 237,
 											"top": 1128,
-											"width": 362.24169921875,
+											"width": 392.005859375,
 											"height": 13,
 											"text": "+updateUser(user: User): void",
 											"horizontalAlignment": 0
@@ -21541,7 +21541,7 @@
 									"font": "Arial;13;0",
 									"left": 232,
 									"top": 1078,
-									"width": 372.24169921875,
+									"width": 402.005859375,
 									"height": 68
 								},
 								{
@@ -21581,7 +21581,7 @@
 							"containerChangeable": true,
 							"left": 232,
 							"top": 1040,
-							"width": 372.24169921875,
+							"width": 402.005859375,
 							"height": 106,
 							"autoResize": true,
 							"nameCompartment": {
@@ -21955,7 +21955,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 773,
+									"left": 788,
 									"top": 1097,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -21976,7 +21976,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 773,
+									"left": 788,
 									"top": 1112,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -21997,7 +21997,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 772,
+									"left": 787,
 									"top": 1068,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -22016,7 +22016,7 @@
 								"$ref": "AAAAAAF/5cyQuuAQZEo="
 							},
 							"lineStyle": 1,
-							"points": "943:1088;604:1091",
+							"points": "943:1088;634:1091",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF/5c5kT/i1MbA="
@@ -22049,8 +22049,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 422,
-									"top": 959,
+									"left": 446,
+									"top": 960,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -22070,8 +22070,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 437,
-									"top": 958,
+									"left": 461,
+									"top": 960,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -22091,8 +22091,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 393,
-									"top": 962,
+									"left": 417,
+									"top": 961,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -22112,8 +22112,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 419,
-									"top": 914,
+									"left": 447,
+									"top": 915,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -22133,8 +22133,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 433,
-									"top": 916,
+									"left": 460,
+									"top": 918,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -22154,8 +22154,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 392,
-									"top": 912,
+									"left": 419,
+									"top": 911,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -22175,8 +22175,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 426,
-									"top": 1006,
+									"left": 447,
+									"top": 1007,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -22195,8 +22195,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 439,
-									"top": 1002,
+									"left": 460,
+									"top": 1004,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -22214,8 +22214,8 @@
 										"$ref": "AAAAAAF/5c6Ye/37XKg="
 									},
 									"font": "Arial;13;0",
-									"left": 396,
-									"top": 1012,
+									"left": 416,
+									"top": 1011,
 									"width": 7.22998046875,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -22262,7 +22262,7 @@
 								"$ref": "AAAAAAF/5cSflaJP5Fk="
 							},
 							"lineStyle": 1,
-							"points": "403:896;413:1039",
+							"points": "432:896;432:1039",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF/5c6Ye/3+OPM="
@@ -23059,7 +23059,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 824,
+									"left": 840,
 									"top": 550,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -23080,7 +23080,7 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 824,
+									"left": 840,
 									"top": 535,
 									"height": 13,
 									"alpha": 1.5707963267948966,
@@ -23101,7 +23101,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 824,
+									"left": 840,
 									"top": 580,
 									"height": 13,
 									"alpha": -1.5707963267948966,
@@ -23122,7 +23122,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 690,
+									"left": 723,
 									"top": 550,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -23143,7 +23143,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 693,
+									"left": 726,
 									"top": 537,
 									"height": 13,
 									"alpha": 0.7853981633974483,
@@ -23164,7 +23164,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 686,
+									"left": 719,
 									"top": 578,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -23271,7 +23271,7 @@
 								"$ref": "AAAAAAF/5cSflaHwpz0="
 							},
 							"lineStyle": 1,
-							"points": "665:572;983:571",
+							"points": "698:572;983:571",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF/5eGgjYEHVPw="
@@ -23391,8 +23391,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 694,
-									"top": 634,
+									"left": 727,
+									"top": 644,
 									"height": 13,
 									"alpha": 0.5235987755982988,
 									"distance": 30,
@@ -23412,8 +23412,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 700,
-									"top": 622,
+									"left": 733,
+									"top": 632,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -23433,8 +23433,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 681,
-									"top": 659,
+									"left": 714,
+									"top": 668,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 25,
@@ -23541,7 +23541,7 @@
 								"$ref": "AAAAAAF/5cSflaHwpz0="
 							},
 							"lineStyle": 1,
-							"points": "665:647;840:704;1032:815",
+							"points": "698:656;840:704;1032:815",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF/5eH07INzNUE="
